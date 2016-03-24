@@ -1,0 +1,35 @@
+_prefs: 
+  mapid: ''
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 6.8033
+  - 51.1535
+  - 9
+description: |-
+  CartoCSS Style based on shades of sand and pale green. Frugal use of labels and colors makes it ideal as an esthetic background to present additional GEO-Information.
+  
+  
+  
+  Optmized for use with osm2vectortiles (http://osm2vectortiles.org/)
+format: png24
+interactivity_layer: ''
+layers: null
+maxzoom: 17
+minzoom: 4
+name: g12n-maps-bright
+source: "https://osm2vectortiles.tileserver.com/v1.json"
+styles: 
+  - variables.mss
+  - areas.mss
+  - water.mss
+  - roads.mss
+  - admin.mss
+  - labels.mss
+template: ''

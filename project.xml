@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#fefbf0">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">6.8033,51.1535,9</Parameter>
+  <Parameter name="description"><![CDATA[CartoCSS Style based on shades of sand and pale green. Frugal use of labels and colors makes it ideal as an esthetic background to present additional GEO-Information.
+
+Optmized for use with osm2vectortiles (http://osm2vectortiles.org/)]]></Parameter>
+  <Parameter name="format">png24</Parameter>
+  <Parameter name="maxzoom">17</Parameter>
+  <Parameter name="minzoom">4</Parameter>
+  <Parameter name="name"><![CDATA[g12n-maps-bright]]></Parameter>
+  <Parameter name="source"><![CDATA[https://osm2vectortiles.tileserver.com/v1.json]]></Parameter>
+</Parameters>
+
+
+<Style name="landuse" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'glacier')</Filter>
+    <PolygonSymbolizer fill="#ffffff" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="#edf8da" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'sand')</Filter>
+    <PolygonSymbolizer fill="#fcf6d8" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#d9eccd" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#e3f0d6" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#e3f0d6" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'scrub')</Filter>
+    <PolygonSymbolizer fill="#e3f0d6" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#ecf4de" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'agriculture')</Filter>
+    <PolygonSymbolizer fill="#f5f8e7" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse</StyleName>  </Layer>
+
+<Style name="waterway" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="0.75" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="1.25" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="7.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'river')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="0.75" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="1.25" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="3.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'drain')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'brook')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'brook')</Filter>
+    <LineSymbolizer stroke-width="0.75" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'brook')</Filter>
+    <LineSymbolizer stroke-width="1.25" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'brook')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'brook')</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'brook')</Filter>
+    <LineSymbolizer stroke-width="3.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'brook')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="0.75" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="1.25" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="3.5" stroke="#98dbf6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'stream')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#98dbf6" />
+  </Rule>
+</Style>
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterway</StyleName>  </Layer>
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#98dbf6" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
+
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="building-3d" filter-mode="first" opacity="0.2">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <BuildingSymbolizer fill="#f6f4e8" fill-opacity="1" height="3" />
+  </Rule>
+</Style>
+<Style name="building" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#f1efe4" />
+  </Rule>
+</Style>
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building</StyleName>
+    <StyleName>building-3d</StyleName>  </Layer>
+
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="road" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="4" stroke="#f6f4e8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke="#f6f4e8" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke="#f1efe4" />
+  </Rule>
+</Style>
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road</StyleName>  </Layer>
+
+<Layer name="bridge"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="admin" filter-mode="first">
+  <Rule>
+    <Filter>([admin_level] = 2) and ([maritime] = 0)</Filter>
+    <LineSymbolizer stroke="#cbc9c0" />
+  </Rule>
+</Style>
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>admin</StyleName>  </Layer>
+
+<Style name="country_label" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="40" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="33.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="30.400000000000002" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="27.200000000000003" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="24" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="20.8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="17.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="14.4" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <TextSymbolizer size="40" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <TextSymbolizer size="36.8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <TextSymbolizer size="33.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <TextSymbolizer size="30.400000000000002" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <TextSymbolizer size="27.200000000000003" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <TextSymbolizer size="24" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <TextSymbolizer size="20.8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <TextSymbolizer size="17.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <TextSymbolizer size="14.4" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <TextSymbolizer size="11.2" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <TextSymbolizer size="8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>country_label</StyleName>  </Layer>
+
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="state_label" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="20" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="17.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16.4" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="15.2" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="14" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="12.8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="11.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="10.4" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([lokalrank] &lt;= 2)</Filter>
+    <TextSymbolizer size="8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <TextSymbolizer size="20" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <TextSymbolizer size="18.799999999999997" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <TextSymbolizer size="17.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <TextSymbolizer size="16.4" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <TextSymbolizer size="15.2" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <TextSymbolizer size="14" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <TextSymbolizer size="12.8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <TextSymbolizer size="11.6" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <TextSymbolizer size="10.4" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <TextSymbolizer size="9.2" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <TextSymbolizer size="8" face-name="Droid Serif Regular" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>state_label</StyleName>  </Layer>
+
+<Style name="place_label" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="18" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="15.6" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="14.4" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="13.2" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="12" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="10.8" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="9.6" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="8.4" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer size="7.2" placements="NW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer placements="NW" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="18" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="15.6" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="14.4" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="13.2" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="12" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="10.8" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="9.6" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="8.4" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer size="7.2" placements="W" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'W')</Filter>
+    <TextSymbolizer placements="W" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="18" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="15.6" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="14.4" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="13.2" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="12" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="10.8" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="9.6" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="8.4" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer size="7.2" placements="SW" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer placements="SW" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="18" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="15.6" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="14.4" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="13.2" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="12" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="10.8" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="9.6" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="8.4" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer size="7.2" placements="S" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'S')</Filter>
+    <TextSymbolizer placements="S" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="18" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="15.6" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="14.4" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="13.2" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="12" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="10.8" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="9.6" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="8.4" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer size="7.2" placements="SE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer placements="SE" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="18" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="15.6" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="14.4" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="13.2" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="12" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="10.8" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="9.6" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="8.4" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer size="7.2" placements="E" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'E')</Filter>
+    <TextSymbolizer placements="E" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="18" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="15.6" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="14.4" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="13.2" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="12" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="10.8" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="9.6" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="8.4" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer size="7.2" placements="NE" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer placements="NE" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="18" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="16.799999999999997" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="15.6" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="14.4" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="13.2" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="12" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="10.8" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="9.6" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="8.4" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer size="7.2" placements="N" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2) and ([ldir] = 'N')</Filter>
+    <TextSymbolizer placements="N" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="18" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="16.799999999999997" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="15.6" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="14.4" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="13.2" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="12" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="10.8" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="9.6" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="8.4" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer size="7.2" face-name="Droid Serif Regular" placement-type="simple" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([localrank] &lt; 2)</Filter>
+    <TextSymbolizer face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'NW')</Filter>
+    <TextSymbolizer placements="NW" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'W')</Filter>
+    <TextSymbolizer placements="W" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'SW')</Filter>
+    <TextSymbolizer placements="SW" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'S')</Filter>
+    <TextSymbolizer placements="S" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'SE')</Filter>
+    <TextSymbolizer placements="SE" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'E')</Filter>
+    <TextSymbolizer placements="E" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'NE')</Filter>
+    <TextSymbolizer placements="NE" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city') and ([ldir] = 'N')</Filter>
+    <TextSymbolizer placements="N" face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'city')</Filter>
+    <TextSymbolizer face-name="Droid Serif Regular" placement-type="simple" size="8" fill="#7f7e78" halo-fill="#fefbf0" halo-radius="1" dx="3" dy="3" ><![CDATA[[name_de]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>place_label</StyleName>  </Layer>
+
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+</Map>
