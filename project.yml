@@ -9,11 +9,15 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 6.8033
-  - 51.1535
-  - 9
+  - 6.9593
+  - 50.9369
+  - 15
 description: |-
   CartoCSS Style based on shades of sand and pale green. Frugal use of labels and colors makes it ideal as an esthetic background to present additional GEO-Information.
+  
+  
+  
+  
   
   
   

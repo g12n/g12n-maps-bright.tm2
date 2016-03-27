@@ -4,8 +4,10 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">6.8033,51.1535,9</Parameter>
+  <Parameter name="center">6.9593,50.9369,15</Parameter>
   <Parameter name="description"><![CDATA[CartoCSS Style based on shades of sand and pale green. Frugal use of labels and colors makes it ideal as an esthetic background to present additional GEO-Information.
+
+
 
 Optmized for use with osm2vectortiles (http://osm2vectortiles.org/)]]></Parameter>
   <Parameter name="format">png24</Parameter>
@@ -300,9 +302,24 @@ Optmized for use with osm2vectortiles (http://osm2vectortiles.org/)]]></Paramete
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>road</StyleName>  </Layer>
 
+<Style name="bridge" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="4" stroke="#f4f1e6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke="#f4f1e6" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke="#f1efe4" />
+  </Rule>
+</Style>
 <Layer name="bridge"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>bridge</StyleName>  </Layer>
 
 <Style name="admin" filter-mode="first">
   <Rule>
